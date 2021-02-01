@@ -28,3 +28,259 @@ body {
   background: #0b0b0b;
 }
 
+/* testing */
+.menu, .content, .footer {
+  background: #0b0b0b;
+}
+
+/* The main content displayed in center */
+.content {
+  margin: auto;
+  max-width: 90%;
+}
+
+/* Navbar: page links */
+.menu {
+  background: #0b0b0ba3;
+  position: fixed;
+  width: 100%;
+  padding: 0 5%;
+  z-index: 300;
+}
+
+.menu a {
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.menu__item:link, .menu__item:visited {
+  color: #ffffff;
+}
+
+.menu__item:hover, .menu__item:active {
+  color: #ff1c1c;
+}
+
+.menu__title {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.3em;
+}
+
+.menu li {
+  display: inline-block;
+  list-style: none;
+  font-size: 0.8em;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 10px 10px;
+}
+
+
+
+/* Principal view: a quick presentation */
+.bio {
+  height: 100vh;
+  position: relative;
+  z-index: 250;
+}
+
+.bio__photo {
+  background: url(img/Brus_original.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: -5vw;
+}
+
+.bio__gradient {
+  background: linear-gradient(to bottom, #0000, #0b0b0b);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bio__me {
+  position: relative;
+  top: 65vh;
+}
+
+.subtitle__marker {
+  width: 7px;
+  height: 56px;
+  background: #ff1c1c;
+  position: absolute;
+  top: 8px;
+  left: -5vw;
+}
+
+.subtitle__name {
+  display: inline-block;
+  font-size: 2.4em;
+  font-weight: 600;
+}
+
+.subtitle img {
+  width: 41px;
+  position: relative;
+  top: 8px;
+  left: 2px;
+}
+
+.bio__me p {
+  font-size: 0.8em;
+}
+
+@media only screen and (min-width: 599px) {
+
+  .content {
+    width: 85%;
+  }
+
+  .bio {
+    position: initial;
+  }
+
+  .bio__photo {
+    width: 100%;
+    height: 70vh;
+    position: initial;
+    background-position: top;
+    margin: auto;
+  }
+
+  .bio__gradient {
+    background: linear-gradient(to bottom, #0000, #0b0b0b);
+    position: initial;
+    width: 101%;
+    height: 70vh;
+    margin: 0 -1px;
+  }
+
+  .bio__me {
+    position: initial;
+    margin: 5vh 0;
+  }
+
+  .subtitle__marker {
+    position: absolute;
+    height: 65px;
+    top: 76vh;
+    left: 0;
+  }
+
+  .subtitle__name {
+    font-size: 3em;
+  }
+
+  .subtitle img {
+    width: 54px;
+  }
+
+  .bio__me p {
+    font-size: 1em;
+  }
+
+  .menu {
+    padding: 0 7.5%;
+  }
+
+  .menu__title {
+    text-align: left;
+  }
+
+  .menu ul {
+    justify-content: left;
+  }
+
+  .menu li {
+    padding: 0 7%;
+  }
+
+}
+
+@media only screen and (min-width: 1023px) {
+
+  .content {
+    width: 80%;
+  }
+
+  .bio {
+    position: initial;
+  }
+
+  .bio__me {
+    margin: 0;
+    position: relative;
+    top: 30vh;
+  }
+
+  .subtitle__marker {
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left: -10vw;
+  }
+
+  .subtitle__name {
+    font-size: 4em;
+  }
+
+  .subtitle img {
+    width: 65px;
+    left: 5px;
+  }
+
+  .bio__me p {
+    font-size: 1em;
+  }
+
+  .bio__photo {
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -59%;
+  }
+
+  .bio__gradient {
+    height: 100vh;
+  }
+
+  .bio__grad-r {
+    background: linear-gradient(to left, #0000, #0b0b0b);
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu {
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu__title {
+    display: inline-block;
+  }
+
+  .menu ul {
+    display: inline-flex;
+    justify-content: flex-end;
+    padding: 27px 0;
+  }
+
+  .menu li {
+    padding: 0 3vw;
+  }
+
+}
