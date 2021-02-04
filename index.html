@@ -17,16 +17,21 @@
     </div>
     <ul>
       <li>
-        <a href="#" class="menu__item">Sobre mí</a>
+        <a href="#about" class="menu__item">Sobre mí</a>
       </li>
       <li>
-        <a href="#" class="menu__item">Proyectos</a>
+        <a href="#projects" class="menu__item">Proyectos</a>
       </li>
       <li>
-        <a href="#" class="menu__item">Skills</a>
+        <a href="#skills" class="menu__item">Skills</a>
       </li>
       <li>
-        <a href="#" class="menu__item">Contacto</a>
+        <a href="#contact" class="menu__item">Contacto</a>
+      </li>
+      <li id="link_undeployed">
+        <a href="">Blog
+          <span>próximamente...</span>
+        </a>
       </li>
     </ul>
 
@@ -34,13 +39,14 @@
 
   <div class="content">
 
-    <main class="bio">
+    <div class="only-photo">
 
       <div class="bio__photo">
         <div class="bio__gradient">
           <div class="bio__grad-r"></div>
         </div>
       </div>
+
 
       <div class="bio__me">
         <div class="subtitle">
@@ -51,16 +57,201 @@
         <p>Estudiante de Ingeniería</p>
         <p>Desarrollador Web Pre-Junior</p>
       </div>
-    </main>
 
-    <section class="about">about</section>
-    <section class="projects">projects</section>
-    <section class="skills">skills</section>
-    <section class="contact">contact</section>
+      <section class="about" id="about">
+
+        <div class="subtitle-sec">
+          <div class="subtitle-sec__marker"></div>
+          <h2 class="subtitle-sec__name">Sobre mí</h2>
+        </div>
+
+        <p>Mi nombre es Bruno Cruz Granados. Tengo 22 años y soy estudiante de Ingeniería en Computación. Mi interés por
+          la programación nació en los talleres escolares y reuniones que organizaban las academias de programación en
+          redes sociales, donde hice un par de proyectos relacionados con la web con diferentes tecnologías.</p>
+        <br>
+        <p>A través de cada proyecto escolar, taller y evento al que he asistido me dí cuenta de que tenía estas
+          habilidades intrínsecas en mí, y al ver a las y los mentores trabajando, con mucho conocimiento y conociendo a
+          la perfección sus objetivos, decidí que un Full Stack es en lo que quiero convertirme.</p>
+        <br>
+        <p>Si tuviera que definir a Bruno, lo definiría como una persona bastante seria, introvertida y de pocas
+          palabras, pero que le gusta mucho escuchar y aprender cualquier cosa de los demás. Cuando tiene
+          responsabilidades se dedica a completarlas y resolverlas hasta el más mínimo detalle. En pocas palabras, le
+          gusta terminar el día satisfecho, sabiendo que ha aprendido algo nuevo y que ha sido productivo.</p>
+
+      </section>
+
+    </div>
+
+
+    <section class="projects" id="projects">
+
+      <div class="subtitle-sec">
+        <div class="subtitle-sec__marker"></div>
+        <h2 class="subtitle-sec__name">Proyectos</h2>
+      </div>
+
+      <div class="project">
+        <div class="project__description">
+          <h3>Notas MERN</h3>
+          <p>Aplicación web de notas con el stack de tecnologías MERN: MongoDB, ExpressJS, ReactJS y Node JS, alojada en
+            Heroku.</p>
+          <br>
+          <a href="https://mern-stack-brus.herokuapp.com/" class="project__deployed" target="_blank">pruebalo aquí</a>
+        </div>
+        <div class="project__images">
+          <div class="project__image mern1"></div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project__description">
+          <h3>Maquetado Responsive</h3>
+          <p>Ejemplo de un sitio web que ofrece soluciones tecnológicas, cuyo diseño es responsive para dispositivos
+            moviles.</p>
+          <br>
+          <a href="https://brus2099.github.io/simple-maquetation/" class="project__deployed" target="_blank">pruebalo
+            aquí</a>
+        </div>
+        <div class="project__images">
+          <div class="project__image responsive1"></div>
+          <div class="project__image responsive2"></div>
+          <div class="project__image responsive3"></div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project__description">
+          <h3>Blogs de articulos</h3>
+          <p>Blog de articulos que consumen el mismo backend y la misma base de datos, construido con 3 frameworks de
+            JavaScript diferentes: Angular, React y Vue.</p>
+          <br>
+          <a class="project__undeployed">(proximamente en producción)</a>
+        </div>
+        <div class="project__images">
+          <div class="project__image blog1"></div>
+          <div class="project__image blog2"></div>
+          <div class="project__image blog3"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="skills" id="skills">
+
+      <div class="subtitle-sec">
+        <div class="subtitle-sec__marker"></div>
+        <h2 class="subtitle-sec__name">Skills</h2>
+      </div>
+
+      <div class="skills__all">
+        <div class="skills__group">
+          <h3>Web Development</h3>
+          <div class="skills__expandible">
+            <div class="skills__item html">HTML5</div>
+            <div class="skills__item css">CSS3</div>
+            <div class="skills__item js">JavaScript</div>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3>Advanced Web</h3>
+          <div class="skills__expandible">
+            <div class="skills__item react">React JS</div>
+            <div class="skills__item node">Node JS & NPM</div>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3>Tools</h3>
+          <div class="skills__expandible">
+            <div class="skills__item git">Git & Github</div>
+            <div class="skills__item linux">Linux (Fedora)</div>
+            <div class="skills__item poo">POO</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Tecnologias y conocimientos que he usado o aprendido en algun momento, y que está en mis planes dominar.</p>
+
+      <div class="skills__future">
+        <ul>
+          <li>VueJS</li>
+          <li>UX/UI</li>
+          <li>SASS</li>
+          <li>BEM</li>
+          <li>TypeScript</li>
+          <li>Deno</li>
+          <li>Django</li>
+          <li>ExpressJS</li>
+          <li>SQL (My SQL)</li>
+          <li>NoSQL (MongoDB)</li>
+          <li>Cloud Computing Services (AWS)</li>
+          <li>API's Usage</li>
+          <li>Clean Architecture</li>
+          <li>Data Structures</li>
+          <li>Algorithms</li>
+          <li>Complexity</li>
+          <li>Big-O</li>
+        </ul>
+      </div>
+
+
+    </section>
+
+    <section class="contact" id="contact">
+
+      <div class="subtitle-sec">
+        <div class="subtitle-sec__marker"></div>
+        <h2 class="subtitle-sec__name">Contacto</h2>
+      </div>
+
+      <div class="contact__item">
+        <img src="img/mail.png" alt="mail icon">
+        <div class="contact__info">
+          <p>brunocruzgranados@outlook.com</p>
+          <p>indiebrus@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact__item">
+        <img src="img/linkedinwhite.png" alt="linkedin icon">
+        <div class="contact__info">
+          <p>Bruno Cruz Granados</p>
+          <a href="https://www.linkedin.com/in/brus2099">https://www.linkedin.com/in/brus2099</a>
+        </div>
+      </div>
+
+      <div class="contact__item">
+        <img src="img/githublogo.png" alt="github icon">
+        <div class="contact__info">
+          <p>@brus2099</p>
+          <a href="https://github.com/brus2099">https://github.com/brus2099</a>
+        </div>
+      </div>
+
+      <div class="contact__item">
+        <img src="img/telegramwhite.png" alt="telegram icon">
+        <div class="contact__info">
+          <p>@BrusCG</p>
+          <a href="https://t.me/BrusCG">https://t.me/BrusCG</a>
+        </div>
+      </div>
+
+      <div class="contact__item">
+        <img src="img/whatsapp.png" alt="whatsapp icon">
+        <div class="contact__info">
+          <p>+52 55 76233244</p>
+          <a href="https://wa.link/g25t7z">https://wa.link/g25t7z</a>
+        </div>
+      </div>
+
+    </section>
 
   </div>
 
-  <footer class="footer">footer</footer>
+  <footer class="footer">
+    <p>© 2021. Desarrollado por Bruno Cruz Granados.</p>
+  </footer>
 
 </body>
 

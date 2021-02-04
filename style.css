@@ -28,10 +28,6 @@ body {
   background: #0b0b0b;
 }
 
-/* testing */
-.menu, .content, .footer {
-  background: #0b0b0b;
-}
 
 /* The main content displayed in center */
 .content {
@@ -41,7 +37,7 @@ body {
 
 /* Navbar: page links */
 .menu {
-  background: #0b0b0ba3;
+  background: #0b0b0bdd;
   position: fixed;
   width: 100%;
   padding: 0 5%;
@@ -50,8 +46,8 @@ body {
 
 .menu a {
   text-decoration: none;
-  transition: 0.3s;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .menu__item:link, .menu__item:visited {
@@ -81,6 +77,48 @@ body {
   padding: 0px 10px 10px;
 }
 
+#link_undeployed {
+  position: relative;
+  display: none;
+}
+
+#link_undeployed span {
+  position: absolute;
+  background: #202020;
+  color: #bbb;
+  top: 27px;
+  left: -20%;
+  width: 120px;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#link_undeployed span::after {
+  position: absolute;
+  bottom: 100%;
+  left: 60%;
+  content: "";
+  border: 7px solid;
+  border-color: transparent transparent #202020 transparent;
+}
+
+#link_undeployed a:hover  span {
+  opacity: 1;
+}
+
+
+#link_undeployed a:link, #link_undeployed a:visited {
+  color: #fff5;
+  cursor: not-allowed;
+}
+
+#link_undeployed a:hover, #link_undeployed a:active {
+  cursor: not-allowed;
+}
+
 
 
 /* Principal view: a quick presentation */
@@ -95,7 +133,7 @@ body {
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: relative;
   top: 0;
   left: -5vw;
 }
@@ -110,7 +148,7 @@ body {
 }
 
 .bio__me {
-  position: relative;
+  position: absolute;
   top: 65vh;
 }
 
@@ -140,14 +178,310 @@ body {
   font-size: 0.8em;
 }
 
+/* Separation between sections */
+.content section {
+  margin: 20px 0;
+}
+
+.about, .projects, .skills, .contact {
+  padding-top: 100px;
+  background: #f000;
+}
+
+/* Formating subtitles */
+.subtitle-sec {
+  position: relative;
+  margin: 0 0 45px 0;
+}
+
+.subtitle-sec__marker {
+  width: 5px;
+  height: 45px;
+  background: #ff1c1c;
+  position: absolute;
+  left: -5vw;
+}
+
+.subtitle-sec__name {
+  display: inline-block;
+  max-width: 50vw;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.subtitle-sec__name::after {
+  content: "Sobre mí";
+  color: #ffffff0b;
+  position: absolute;
+  top: -25px;
+  left: -3px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2.2em;
+}
+
+.about .subtitle-sec__name::after {
+  content: "Sobre mí";
+}
+
+.projects .subtitle-sec__name::after {
+  content: "Proyectos";
+}
+
+.skills .subtitle-sec__name::after {
+  content: "Skills";
+}
+
+.contact .subtitle-sec__name::after {
+  content: "Contacto";
+}
+/* Presentation: about me */
+.about p {
+  font-size: 0.9em;
+}
+
+/* All work: projects */
+.project {
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+.project__description {
+  background: #151515;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.project__description:hover {
+  background: #ff1c1c;
+}
+
+.project__description h3 {
+  font-weight: 400;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.project__description p {
+  font-size: 0.9em;
+}
+
+.project__images {
+  width: 100%;
+  height: 50vw;
+  margin: 1vw 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__image {
+  background-position: center;
+  background-size: cover;
+  margin-right: 1vw;
+}
+
+              /* Notas mern */
+.mern1 {
+  background-image: url(img/Note1.png);
+  flex: 1;
+}
+
+              /* maquetado responsive */
+.responsive1 {
+  background-image: url(img/Sim5.png);
+  flex: 2;
+}
+
+.responsive2 {
+  background-image: url(img/Sim4.png);
+  flex: 1;
+}
+
+.responsive3 {
+  margin-right: 0;
+}
+
+              /* blogs de articulos */
+.blog1 {
+  background-image: url(img/Art2.png);
+  flex: 1;
+}
+
+.blog2 {
+  background-image: url(img/Art3.png);
+  flex: 1;
+}
+
+.project__deployed, .project__undeployed {
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.project__deployed {
+  cursor: pointer;
+}
+
+.project__undeployed {
+  color: #fff9;
+  cursor: not-allowed;
+}
+
+
+/* All my skills: two groups of skills */
+.skills__group {
+  transition: 0.3s;
+  margin: 30px 0;
+}
+
+.skills__group h3 {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.skills__expandible {
+  margin-left: 10%;
+  width: 90%;
+  margin: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skills__item {
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.skills__group:hover .skills__item {
+  height: 35px;
+}
+
+.skills__item::after {
+  content: "";
+  background: #ff1c1c;
+  width: 0px;
+  height: 24px;
+  margin-top: -24px;
+  display: block;
+  position: absolute;
+  left: 0;
+  z-index: -100;
+  transition: 0.4s;
+}
+
+        /* Individual skills */
+.html:hover::after {
+  width: 60vw;
+}
+
+.css:hover::after {
+  width: 65vw;
+}
+
+.js:hover::after {
+  width: 35vw;
+}
+
+.react:hover::after {
+  width: 40vw;
+}
+
+.node:hover::after {
+  width: 30vw;
+}
+
+.git:hover::after {
+  width: 65vw;
+}
+
+.linux:hover::after {
+  width: 25vw;
+}
+
+.poo:hover::after {
+  width: 70vw;
+}
+
+.skills p {
+  font-size: 0.9em;
+}
+
+.skills__future {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills__future ul li {
+  list-style: none;
+  font-size: 0.9em;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px 10px 4px 0;
+  transition: 0.3s;
+}
+
+.skills__future ul li:hover {
+  background: #ff1c1c;
+}
+
+
+/* Contact alternatives */
+.contact__item {
+  font-size: 0.8em;
+  margin: 15px 4%;
+}
+
+.contact__item img {
+  width: 40px;
+  display: inline-block;
+  position: relative;
+  margin: 0 4% 0 0;
+  top: 7px;
+}
+
+.contact__info {
+  width: 70%;
+  display: inline-block;
+}
+
+.contact__info p {
+  font-weight: 600;
+}
+
+.contact__info a {
+  transition: 00.3s;
+  text-decoration: none;
+}
+
+.contact__info a:link, .contact__info a:visited {
+  color: #fff;
+}
+
+.contact__info a:hover, .contact__info a:active {
+  cursor: pointer;
+  color: #ff1c1c;
+}
+
+/* Final of page: footer */
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 100px;
+  background: #202020;
+}
+
+.footer p {
+  text-align: center;
+  font-size: 0.8em;
+}
+
 @media only screen and (min-width: 599px) {
 
   .content {
     width: 85%;
-  }
-
-  .bio {
-    position: initial;
   }
 
   .bio__photo {
@@ -159,7 +493,7 @@ body {
   }
 
   .bio__gradient {
-    background: linear-gradient(to bottom, #0000, #0b0b0b);
+    background: linear-gradient(to bottom, #0000, #0b0b0b 95%);
     position: initial;
     width: 101%;
     height: 70vh;
@@ -168,7 +502,8 @@ body {
 
   .bio__me {
     position: initial;
-    margin: 5vh 0;
+    height: 30vh;
+    padding: 3vh 0;
   }
 
   .subtitle__marker {
@@ -206,6 +541,69 @@ body {
     padding: 0 7%;
   }
 
+  .subtitle-sec__marker {
+    width: 7px;
+    height: 60px;
+    left: -7.5vw;
+  }
+  
+  .subtitle-sec__name {
+    font-size: 2.75em;
+  }
+  
+  .subtitle-sec__name::after {
+    top: -40px;
+    left: -3px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 2.5em;
+  }
+
+  .about p {
+    font-size: 1em;
+  }
+
+  .project {
+    display: flex;
+  }
+
+  .project__images {
+    margin: 0;
+    height: 210px;
+  }
+
+  .project__image {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .responsive2 {
+    display: none;
+  }
+
+  .responsive3 { 
+    display: none;
+  }
+
+  .blog1, .blog2 {
+    display: none;
+  }
+
+  .blog3 {
+    background-image: url(img/Art1.png);
+    flex: 1;
+  }
+
+  .contact__item {
+    margin: 20px 0  20px 20%;
+    font-size: 0.9em;
+  }
+
+  .contact__item img {
+    width: 50px;
+    top: 10px;
+  }
+
 }
 
 @media only screen and (min-width: 1023px) {
@@ -214,13 +612,18 @@ body {
     width: 80%;
   }
 
+
+  #link_undeployed {
+    display: initial;
+  }
+
   .bio {
-    position: initial;
+    position: relative;
   }
 
   .bio__me {
     margin: 0;
-    position: relative;
+    position: absolute;
     top: 30vh;
   }
 
@@ -228,6 +631,10 @@ body {
     position: absolute;
     height: 100px;
     top: 0;
+    left: -10vw;
+  }
+
+  .subtitle-sec__marker {
     left: -10vw;
   }
 
@@ -243,14 +650,17 @@ body {
   .bio__me p {
     font-size: 1em;
   }
+  
+  .only_photo {
+    position: relative;
+  }
 
   .bio__photo {
     width: 40vw;
     height: 100vh;
-    position: absolute;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: -59%;
+    margin: 0 0 0 48vw;
   }
 
   .bio__gradient {
@@ -281,6 +691,67 @@ body {
 
   .menu li {
     padding: 0 3vw;
+  }
+
+  .about {
+    width: 48vw;
+    height: auto;
+    padding-bottom: 20vh;
+  }
+
+  .project__images {
+    flex: auto;
+  }
+
+  .responsive1 {
+    flex: 4;
+  }
+
+  .responsive2, .responsive3 {
+    display: block;
+  }
+
+  .responsive2 {
+    flex: 2;
+  }
+  
+  .responsive3 {
+    background-image: url(img/SimM1.png);
+    flex: 4;
+  }
+  
+  .blog1, .blog2 {
+    display: block;
+  }
+
+  .blog3 {
+    flex: 2;
+  }
+
+  .skills__all {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .skills__group {
+    flex: 1;
+  }
+
+  .skills__group h3 {
+    font-size: 1.5em;
+  }
+
+  .skills__item {
+    font-size: 1.2m;
+  }
+
+  .skills__future li {
+    font-size: 1.1em;
+  }
+  
+  .contact__item {
+    margin: 20px 0 20px 30%;
+    font-size: 0.9em;
   }
 
 }
